@@ -1,6 +1,8 @@
-import fixlyIcon from '../../../AppFiles/contacts/fixly.png'
+import { appFiles } from '../../../AppVar'
 
-function ContactCardHighlight({ t }) {
+const fixlyIcon = `${appFiles}/contacts/fixly.png`
+
+function ContactCardHighlight({ props:{ t } }) {
 
   const { highlightTitle, highlightText, fixlyUrl, highlightCta } = t.contact
   

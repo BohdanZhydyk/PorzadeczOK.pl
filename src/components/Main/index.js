@@ -3,15 +3,15 @@ import Hero from './Hero'
 import Sections from './Sections'
 import Contact from './Contact'
 
-function Main({ t }) {
+function Main({ props:{ t } }) {
   return (
     <main className="SiteMain">
 
-      <Hero t={t} />
+      <Hero props={{ t }} />
 
-      <Sections t={t} />
+      <Sections props={{ t }} />
 
-      <Contact t={t} />
+      <Contact props={{ t }} />
 
     </main>
   )

@@ -1,10 +1,12 @@
 import './Footer.scss'
+import { getCopyrightYears } from '../../AppFunc'
 
-function Footer({ t, copyrightYears }) {
+function Footer({ props:{ t } }) {
 
   const copyrightDomain = `bzDrive.com`
   const copyrightHref = `https://${copyrightDomain}`
   const { copy, authorLabel, authorName, copyrightLabel } = t.footer
+  const copyrightYears = getCopyrightYears()
 
   return (
     <footer className="SiteFooter">
@@ -20,7 +22,7 @@ function Footer({ t, copyrightYears }) {
           {copyrightLabel} {copyrightYears}{' '}
 
           <a className="FooterLink" href={copyrightHref} target="_blank" rel="noreferrer">
-            copyrightDomain
+            {copyrightDomain}
           </a>
 
         </span>

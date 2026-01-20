@@ -3,7 +3,7 @@ import SectionHeader from '../SectionHeader'
 import ContactCard from './ContactCard'
 import ContactCardHighlight from './ContactCardHighlight'
 
-function Contact({ t }) {
+function Contact({ props:{ t } }) {
   
   const { title, subtitle } = t.contact
 
@@ -15,9 +15,9 @@ function Contact({ t }) {
       <div className="SectionBody">
         <div className="ContactGrid">
 
-          <ContactCard t={t} />
+          <ContactCard props={{ t }} />
 
-          <ContactCardHighlight t={t} />
+          <ContactCardHighlight props={{ t }} />
 
         </div>
       </div>

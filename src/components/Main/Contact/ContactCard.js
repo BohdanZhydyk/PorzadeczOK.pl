@@ -1,9 +1,11 @@
 import ContactLine from './ContactLine'
-import telIcon from '../../../AppFiles/contacts/tel.png'
-import emailIcon from '../../../AppFiles/contacts/email.png'
-import fixlyIcon from '../../../AppFiles/contacts/fixly.png'
+import { appFiles } from '../../../AppVar'
 
-function ContactCard({ t }) {
+const telIcon = `${appFiles}/contacts/tel.png`
+const emailIcon = `${appFiles}/contacts/email.png`
+const fixlyIcon = `${appFiles}/contacts/fixly.png`
+
+function ContactCard({ props:{ t } }) {
 
   const { phone, email, fixlyUrl, fixlyLabel, cardTitle, cardText } = t.contact
   const tel = `tel:${phone.replace(/\s/g, '')}`

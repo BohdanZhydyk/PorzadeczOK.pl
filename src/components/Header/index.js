@@ -1,7 +1,9 @@
 import './Header.scss'
-import logo from '../../AppFiles/PorzadeczOK_logo.png'
+import { appFiles } from '../../AppVar'
 
-function Header({ t, isCompact }) {
+const logo = `${appFiles}/PorzadeczOK_logo.png`
+
+function Header({ props:{ t, isCompact } }) {
 
   const { name, tagline } = t.brand
   const { services, process, contact, cta } = t.nav

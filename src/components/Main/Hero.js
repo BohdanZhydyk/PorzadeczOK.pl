@@ -1,4 +1,4 @@
-function Hero({ t }) {
+function Hero({ props:{ t } }) {
 
   const { eyebrow, title, subtitle, ctaPrimary, ctaSecondary, stats } = t.hero
 

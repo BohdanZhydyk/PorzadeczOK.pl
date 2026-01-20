@@ -1,6 +1,6 @@
 import SectionHeader from './SectionHeader'
 
-function Sections({ t }) {
+function Sections({ props:{ t } }) {
   return (
     <>
     {

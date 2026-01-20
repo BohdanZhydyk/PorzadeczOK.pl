@@ -9,9 +9,6 @@ function App() {
 
   const t = translations.pl
   const [isCompact, setIsCompact] = useState(false)
-  const currentYear = new Date().getFullYear()
-  const copyrightYears = `2018-${currentYear}`
-
   useEffect(() => {
     const handleScroll = () => {
       const next = window.scrollY > 40
@@ -26,11 +23,11 @@ function App() {
   return (
     <div className="Page">
 
-      <Header t={t} isCompact={isCompact} />
+      <Header props={{ t, isCompact }} />
 
-      <Main t={t} />
+      <Main props={{ t }} />
 
-      <Footer t={t} copyrightYears={copyrightYears} />
+      <Footer props={{ t }} />
 
     </div>
   )
