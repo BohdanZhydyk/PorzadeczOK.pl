@@ -1,0 +1,260 @@
+.Contact .SectionBody {
+  margin-top: 1.11vw;
+}
+
+.ContactGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.7vw;
+}
+
+.ContactCard {
+  flex: 1 1 18.06vw;
+  margin: 0.7vw;
+  min-width: 22vw;
+  max-width: 100%;
+}
+
+.ContactCard {
+  background: var(--card);
+  padding: 1.81vw;
+  border-radius: 1.53vw;
+  border: 1px solid #1e241c14;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.83vw 1.67vw #1e241c0f;
+  backdrop-filter: blur(0.56vw);
+}
+
+.ContactCard h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(1.1vw, 1.35vw, 1.7vw);
+}
+
+.ContactCard > * + * {
+  margin-top: 0.83vw;
+}
+
+.ContactCard.Highlight {
+  background: var(--accent);
+  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ContactCard.Highlight h3 {
+  color: #fff;
+}
+
+.ContactCard.Highlight .Btn {
+  background: #fff;
+  color: var(--accent-strong);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.69vw 1.39vw #1e241c1a;
+  animation: fixly-pulse 1.6s ease-in-out infinite;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  margin-top: 2.5vw;
+}
+
+.ContactCard.Highlight .Btn::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -40%;
+  width: 40%;
+  height: 140%;
+  background: linear-gradient(90deg, #ffffff00, #38ae1e33, #ffffff00);
+  transform: skewX(-18deg);
+  animation: fixly-shine 2.4s ease-in-out infinite;
+}
+
+.HighlightIcon {
+  width: 3.4vw;
+  height: 3.4vw;
+  object-fit: contain;
+  background: #ffffffcc;
+  padding: 0.4vw;
+  border-radius: 0.85vw;
+  box-shadow: 0 0.56vw 1.11vw #1e241c2b;
+}
+
+.HighlightHeader {
+  display: flex;
+  align-items: center;
+}
+
+.HighlightHeader > * + * {
+  margin-left: 0.83vw;
+}
+
+.HighlightHeader h3 {
+  margin: 0;
+}
+
+.HighlightHeader p {
+  margin: 0.28vw 0 0;
+}
+
+.ContactCard.Highlight .Btn:hover {
+  transform: translateY(-0.28vw) scale(1.08);
+  box-shadow: 0 1.8vw 3.6vw #2d89186b;
+  filter: brightness(1.12);
+}
+
+@keyframes fixly-pulse {
+  0% {
+    transform: translateZ(0) scale(1);
+    box-shadow: 0 0.69vw 1.39vw #2d891820;
+  }
+  50% {
+    transform: translateZ(0) scale(1.03);
+    box-shadow: 0 1.39vw 2.78vw #2d89185a;
+  }
+  100% {
+    transform: translateZ(0) scale(1);
+    box-shadow: 0 0.69vw 1.39vw #2d891820;
+  }
+}
+
+@keyframes fixly-shine {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(240%) skewX(-18deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(240%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+
+.ContactLines {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  margin: 1vw 0;
+}
+
+.ContactLines > * + * {
+  margin-top: 0.42vw;
+}
+
+.ContactLine {
+  display: flex;
+  align-items: center;
+  margin: 1vw 0;
+}
+
+.ContactLine > * + * {
+  margin-left: 1vw;
+}
+
+.ContactIcon {
+  width: 2vw;
+  height: 2vw;
+  object-fit: contain;
+}
+
+.ContactLink {
+  color: inherit;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.ContactLink:hover {
+  text-decoration: underline;
+  color: var(--accent-strong);
+}
+
+.ContactNote {
+  position: relative;
+  padding-left: clamp(1vw, 1.2vw, 1.6vw);
+}
+
+.ContactNote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.65vw;
+  height: 0.65vw;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  box-shadow: 0 0.28vw 0.56vw #2d891833;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1200px) {
+  .ContactCard h3 {
+    font-size: 1.7vw;
+  }
+
+  .ContactLink,
+  .ContactCard p {
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .ContactGrid {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .ContactCard {
+    width: 100%;
+    margin: 0 0 2vw 0;
+  }
+
+  .ContactCard:last-child {
+    margin-bottom: 0;
+  }
+
+  .ContactLink,
+  .ContactLine,
+  .ContactCard p {
+    font-size: 2.4vw;
+  }
+
+  .ContactCard h3 {
+    font-size: 2vw;
+  }
+
+  .ContactIcon {
+    width: 2.6vw;
+    height: 2.6vw;
+  }
+
+  .HighlightIcon {
+    width: 4.8vw;
+    height: 4.8vw;
+  }
+
+  .ContactCard.Highlight .Btn {
+    padding: 0.54vw 0.99vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .HighlightIcon {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .ContactCard h3 {
+    font-size: 3.2vw;
+  }
+
+  .ContactLink,
+  .ContactCard p {
+    font-size: 2.5vw;
+  }
+}

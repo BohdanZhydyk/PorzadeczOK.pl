@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react'
+import './App.scss'
+import { translations } from './translations'
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
 
 function App() {
+
+  const t = translations.pl
+  const [isCompact, setIsCompact] = useState(false)
+  const currentYear = new Date().getFullYear()
+  const copyrightYears = `2018-${currentYear}`
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const next = window.scrollY > 40
+      setIsCompact((prev) => (prev === next ? prev : next))
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Page">
+
+      <Header t={t} isCompact={isCompact} />
+
+      <Main t={t} />
+
+      <Footer t={t} copyrightYears={copyrightYears} />
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

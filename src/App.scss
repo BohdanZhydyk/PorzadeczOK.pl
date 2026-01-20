@@ -1,0 +1,29 @@
+:root {
+  --bg: #f5fbf4;
+  --bg-soft: #ffffffb3;
+  --ink: #1e241c;
+  --muted: #5b6a58;
+  --accent: #2d8918;
+  --accent-strong: #38ae1e;
+  --accent-soft: #38ae1e24;
+  --card: #ffffffd1;
+  --line: #1e241c1f;
+  --header-height: 7.2vw;
+  --header-height-compact: 5.8vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 110% -10%, #38ae1e40 0%, #38ae1e00 60%),
+    radial-gradient(circle at -10% 110%, #38ae1e33 0%, #38ae1e00 60%),
+    radial-gradient(circle at top left, #ffffff 0%, var(--bg) 55%, #e6f4e3 100%);
+  color: var(--ink);
+  position: relative;
+}

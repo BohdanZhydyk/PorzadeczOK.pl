@@ -1,0 +1,340 @@
+.SiteMain {
+  flex: 1;
+  padding: calc(2.78vw + var(--header-height)) 6vw 5.56vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.SiteMain > * + * {
+  margin-top: 5.56vw;
+}
+
+.Hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -1.11vw;
+}
+
+.Hero > * {
+  flex: 1 1 20.83vw;
+  margin: 1.11vw;
+  min-width: 26vw;
+  max-width: 100%;
+}
+
+.HeroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.HeroSide {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.Hero h2 {
+  font-size: clamp(2.4vw, 3.2vw, 4vw);
+  margin: 0.83vw 0 1.11vw;
+  font-family: 'Courgette', cursive;
+}
+
+.Hero h2 span {
+  display: block;
+}
+
+.Eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: clamp(0.75vw, 0.9vw, 1.1vw);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.Lead {
+  font-size: clamp(1.2vw, 1.45vw, 1.9vw);
+  color: var(--muted);
+  width: 100%;
+}
+
+.HeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.67vw 0 2.22vw;
+  justify-content: flex-end;
+}
+
+.HeroActions > * {
+  margin-right: 0.83vw;
+  margin-bottom: 0.83vw;
+}
+
+.Btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.72vw 1.33vw;
+  border-radius: 50vw;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  font-size: 1vw;
+}
+
+.Btn.Primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.Btn.Ghost {
+  border-color: var(--line);
+  color: var(--ink);
+  background: #fff;
+}
+
+.HeroStats {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.83vw;
+  justify-content: flex-end;
+}
+
+.Stat {
+  display: flex;
+  flex-direction: column;
+  margin: 0.83vw;
+}
+
+.Stat > * + * {
+  margin-top: 0.28vw;
+}
+
+.StatValue {
+  font-size: clamp(1.1vw, 1.35vw, 1.7vw);
+  font-weight: 700;
+}
+
+.StatLabel {
+  color: var(--muted);
+  font-size: clamp(0.9vw, 1.05vw, 1.3vw);
+}
+
+.Section {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: calc(var(--header-height) + 2vw);
+}
+
+.Section > * + * {
+  margin-top: 2.22vw;
+}
+
+.SectionBody {
+  margin-top: 1.11vw;
+}
+
+.SectionHeader h2 {
+  font-size: clamp(2vw, 2.5vw, 3.2vw);
+  margin-bottom: 0.69vw;
+  font-family: 'Courgette', cursive;
+}
+
+.SectionHeader p {
+  color: var(--muted);
+  width: 100%;
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.7vw;
+}
+
+.Cards .Card {
+  flex: 1 1 16.67vw;
+  margin: 0.7vw;
+  min-width: 20vw;
+  max-width: 100%;
+}
+
+.Card {
+  background: var(--card);
+  padding: 1.67vw;
+  border-radius: 1.39vw;
+  border: 1px solid #1e241c14;
+  box-shadow: 0 0.83vw 1.67vw #1e241c0f;
+  backdrop-filter: blur(0.56vw);
+}
+
+.Card h3 {
+  margin: 0 0 0.5vw 0;
+  color: var(--accent);
+  font-size: clamp(1.1vw, 1.35vw, 1.7vw);
+}
+
+.Card p {
+  color: var(--muted);
+  margin-top: 1vw;
+}
+
+@media (max-width: 1200px) {
+  .Hero h2 {
+    font-size: 4vw;
+  }
+
+  .Eyebrow {
+    font-size: 1.1vw;
+  }
+
+  .Lead {
+    font-size: 1.9vw;
+  }
+
+  .SectionHeader h2 {
+    font-size: 3.2vw;
+  }
+
+  .Card h3 {
+    font-size: 1.7vw;
+  }
+
+  .Card p,
+  .SectionHeader p,
+  .StatLabel {
+    font-size: 1.3vw;
+  }
+
+  .StatValue {
+    font-size: 1.8vw;
+  }
+
+  .StatLabel {
+    max-width: 10vw;
+  }
+
+  .Btn {
+    font-size: 1.1vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .Hero {
+    flex-direction: column;
+  }
+
+  .Hero > * {
+    width: 100%;
+  }
+
+  .HeroSide {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .HeroActions {
+    justify-content: flex-end;
+  }
+
+  .HeroStats {
+    justify-content: flex-end;
+  }
+
+  .Stat {
+    width: 20vw;
+    margin: 0 2vw;
+  }
+
+  .StatLabel {
+    max-width: none;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .Hero h2 {
+    font-size: 4.6vw;
+  }
+
+  .Eyebrow {
+    font-size: 1.3vw;
+  }
+
+  .Lead {
+    font-size: 2.3vw;
+  }
+
+  .SectionHeader h2 {
+    font-size: 3.6vw;
+  }
+
+  .Card h3 {
+    font-size: 2vw;
+  }
+
+  .Card p,
+  .SectionHeader p,
+  .StatLabel {
+    font-size: 1.6vw;
+  }
+
+  .StatValue {
+    font-size: 2.2vw;
+  }
+
+  .Btn {
+    font-size: 1.4vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .Cards {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .Cards .Card {
+    width: 100%;
+    margin: 0 0 2vw 0;
+  }
+
+  .Cards .Card:last-child {
+    margin-bottom: 0;
+  }
+
+  .SiteMain {
+    padding-top: calc(2.78vw + 13vw);
+  }
+
+  .Hero h2 {
+    font-size: 6.6vw;
+  }
+
+  .Eyebrow {
+    font-size: 2.1vw;
+  }
+
+  .Lead {
+    font-size: 3.4vw;
+  }
+
+  .SectionHeader h2 {
+    font-size: 5.5vw;
+  }
+
+  .Card h3 {
+    font-size: 3.2vw;
+  }
+
+  .Card p,
+  .SectionHeader p,
+  .StatLabel {
+    font-size: 2.5vw;
+  }
+
+  .StatValue {
+    font-size: 3.4vw;
+  }
+
+  .Btn {
+    font-size: 2.3vw;
+  }
+}

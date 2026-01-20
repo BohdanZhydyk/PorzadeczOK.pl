@@ -1,0 +1,48 @@
+.SiteFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.67vw 5vw;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: clamp(0.9vw, 1.05vw, 1.3vw);
+}
+
+.FooterLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.FooterLink:hover {
+  text-decoration: underline;
+  color: var(--accent-strong);
+}
+
+.FooterSecondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.FooterSecondary > * + * {
+  margin-top: 0.28vw;
+}
+
+@media (max-width: 1200px) {
+  .SiteFooter {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .SiteFooter {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .SiteFooter {
+    font-size: 1.8vw;
+  }
+}
