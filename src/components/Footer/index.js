@@ -9,15 +9,15 @@ function Footer({ props:{ t } }) {
   const copyrightYears = getCopyrightYears()
 
   return (
-    <footer className="SiteFooter">
+    <footer className="SiteFooter flex alignCenter between">
 
       <span>{copy}</span>
 
-      <span className="FooterSecondary">
+      <span className="FooterSecondary flex column alignEnd">
 
         <span>{authorLabel} {authorName}</span>
 
-        <span>
+        <span className="FooterSecondaryLine">
 
           {copyrightLabel} {copyrightYears}{' '}
 

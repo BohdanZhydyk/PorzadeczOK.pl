@@ -1,7 +1,4 @@
 .SiteHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1.67vw 5vw;
   position: fixed;
   top: 0;
@@ -18,10 +15,6 @@
 }
 
 .SiteHeaderInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease;
@@ -37,12 +30,10 @@
 }
 
 .Brand {
-  display: flex;
-  align-items: center;
-}
-
-.Brand > * + * {
-  margin-left: 0.97vw;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .BrandLogo {
@@ -57,14 +48,8 @@
 }
 
 .BrandText {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   width: max-content;
-}
-
-.BrandText > * + * {
-  margin-top: 0.14vw;
+  margin-left: 0.97vw;
 }
 
 .BrandName {
@@ -77,6 +62,7 @@
 }
 
 .BrandTagline {
+  margin-top: 0.14vw;
   font-size: clamp(0.8vw, 0.95vw, 1.2vw);
   color: var(--muted);
   text-align: center;
@@ -85,16 +71,11 @@
 }
 
 .SiteNav {
-  display: flex;
-  flex-wrap: wrap;
   max-width: 100%;
 }
 
-.SiteNav > * + * {
-  margin-left: 1.67vw;
-}
-
 .SiteNav a {
+  margin-left: 1.67vw;
   color: var(--muted);
   text-decoration: none;
   font-weight: 600;
@@ -105,91 +86,47 @@
   color: var(--ink);
 }
 
-.HeaderCta {
-  color: #fff;
-  background: var(--accent);
-  padding: 0.69vw 1.25vw;
-  border-radius: 50vw;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0.69vw 1.39vw #2d891840;
-  white-space: nowrap;
-  font-size: 1vw;
+.LangToggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.LangFlag {
+  width: 2.7vw;
+  height: 2.7vw;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.LangToggle:hover .LangFlag,
+.LangToggle:focus-visible .LangFlag {
+  transform: scale(1.08);
 }
 
 @media (max-width: 1200px) {
-  .BrandLogo {
-    width: 5.6vw;
-    height: 5.6vw;
-  }
-
-  .BrandName {
-    font-size: 3vw;
-  }
-
-  .BrandTagline {
-    font-size: 1.2vw;
-  }
-
-  .HeaderCta {
-    font-size: 1.1vw;
-  }
-
-  .SiteNav a {
-    font-size: 1.1vw;
-  }
+  .BrandLogo { width: 5.6vw; height: 5.6vw; }
+  .BrandName { font-size: 3vw; }
+  .BrandTagline { font-size: 1.2vw; }
+  .LangFlag { width: 3vw; height: 3vw; }
+  .SiteNav a { font-size: 1.1vw; }
 }
 
 @media (max-width: 900px) {
-  .BrandName {
-    font-size: 3.6vw;
-  }
-
-  .BrandTagline {
-    font-size: 1.4vw;
-  }
-
-  .HeaderCta {
-    font-size: 1.4vw;
-  }
-
-  .SiteNav a {
-    font-size: 1.4vw;
-  }
+  .BrandName { font-size: 3.6vw; }
+  .BrandTagline { font-size: 1.4vw; }
+  .LangFlag { width: 3.6vw; height: 3.6vw; }
+  .SiteNav a { font-size: 1.4vw; }
 }
 
 @media (max-width: 600px) {
-  .BrandLogo {
-    width: 8.2vw;
-    height: 8.2vw;
-  }
-
-  .BrandName {
-    font-size: 4.6vw;
-  }
-
-  .BrandTagline {
-    font-size: 2.2vw;
-  }
-
-  .HeaderCta {
-    font-size: 2.3vw;
-    display: none;
-  }
-
-  .SiteNav a {
-    font-size: 2vw;
-  }
-
-  .SiteNav {
-    display: none;
-  }
-
-  .SiteHeader {
-    height: 12vw;
-  }
-
-  .SiteHeader.IsCompact {
-    height: 10vw;
-  }
+  .BrandLogo { width: 8.2vw; height: 8.2vw; }
+  .BrandName { font-size: 4.6vw; }
+  .BrandTagline { font-size: 2.2vw; }
+  .LangFlag { width: 5.2vw; height: 5.2vw; }
+  .SiteNav a { font-size: 2vw; }
+  .SiteNav { display: none; }
+  .SiteHeader { height: 12vw; }
+  .SiteHeader.IsCompact { height: 10vw; }
 }

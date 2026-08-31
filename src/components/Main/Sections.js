@@ -9,12 +9,12 @@ function Sections({ props:{ t } }) {
         const { id, title, subtitle, items } = section
 
         return(
-          <section className="Section" id={id} key={id}>
+          <section className="Section flex column" id={id} key={id}>
 
             <SectionHeader props={{title, subtitle}} />
 
             <div className="SectionBody">
-              <div className="Cards">
+              <div className="Cards flex wrap">
               {
                 items.map((item) => {
 

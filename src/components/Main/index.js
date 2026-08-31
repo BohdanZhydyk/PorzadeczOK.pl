@@ -5,7 +5,7 @@ import Contact from './Contact'
 
 function Main({ props:{ t } }) {
   return (
-    <main className="SiteMain">
+    <main className="SiteMain flex column">
 
       <Hero props={{ t }} />
 

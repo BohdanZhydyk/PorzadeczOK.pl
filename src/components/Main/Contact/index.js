@@ -13,7 +13,7 @@ function Contact({ props:{ t } }) {
       <SectionHeader props={{title, subtitle}} />
 
       <div className="SectionBody">
-        <div className="ContactGrid">
+        <div className="ContactGrid flex wrap">
 
           <ContactCard props={{ t }} />
 

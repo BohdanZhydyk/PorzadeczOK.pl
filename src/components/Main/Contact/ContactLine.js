@@ -4,7 +4,7 @@ function ContactLine({ props:{ href, icon, label, isExternal } }) {
   const rel = isExternal ? 'noreferrer' : undefined
 
   return (
-    <div className="ContactLine">
+    <div className="ContactLine flex alignCenter">
 
       <img className="ContactIcon" src={icon} alt="" aria-hidden="true" />
 

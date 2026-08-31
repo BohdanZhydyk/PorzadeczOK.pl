@@ -12,14 +12,25 @@
   --header-height-compact: 5.8vw;
 }
 
-* {
-  box-sizing: border-box;
-}
+* {  box-sizing: border-box; }
+
+.flex { display: flex; }
+.column { flex-direction: column; }
+.start { justify-content: flex-start; }
+.end { justify-content: flex-end; }
+.between { justify-content: space-between; }
+.evenly { justify-content: space-evenly; }
+.center { justify-content: center; }
+.around { justify-content: space-around; }
+.wrap { flex-wrap: wrap; }
+.nowrap { flex-wrap: nowrap; }
+.alignStart { align-items: flex-start; }
+.alignEnd { align-items: flex-end; }
+.alignCenter { align-items: center; }
+.alignStretch { align-items: stretch; }
 
 .Page {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background:
     radial-gradient(circle at 110% -10%, #38ae1e40 0%, #38ae1e00 60%),
     radial-gradient(circle at -10% 110%, #38ae1e33 0%, #38ae1e00 60%),

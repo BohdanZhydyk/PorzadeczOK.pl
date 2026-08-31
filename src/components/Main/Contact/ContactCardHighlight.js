@@ -7,9 +7,9 @@ function ContactCardHighlight({ props:{ t } }) {
   const { highlightTitle, highlightText, fixlyUrl, highlightCta } = t.contact
   
   return (
-    <div className="ContactCard Highlight">
+    <div className="ContactCard Highlight flex column center">
 
-      <div className="HighlightHeader">
+      <div className="HighlightHeader flex alignCenter">
         <img className="HighlightIcon" src={fixlyIcon} alt="" aria-hidden="true" />
         <div>
           <h3>{highlightTitle}</h3>
@@ -17,7 +17,7 @@ function ContactCardHighlight({ props:{ t } }) {
         </div>
       </div>
 
-      <a className="Btn Primary" href={fixlyUrl} target="_blank" rel="noreferrer">
+      <a className="Btn Primary flex alignCenter center" href={fixlyUrl} target="_blank" rel="noreferrer">
         {highlightCta}
       </a>
 

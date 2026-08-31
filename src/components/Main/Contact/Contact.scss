@@ -3,8 +3,6 @@
 }
 
 .ContactGrid {
-  display: flex;
-  flex-wrap: wrap;
   margin: -0.7vw;
 }
 
@@ -20,8 +18,6 @@
   padding: 1.81vw;
   border-radius: 1.53vw;
   border: 1px solid #1e241c14;
-  display: flex;
-  flex-direction: column;
   box-shadow: 0 0.83vw 1.67vw #1e241c0f;
   backdrop-filter: blur(0.56vw);
 }
@@ -39,7 +35,6 @@
 .ContactCard.Highlight {
   background: var(--accent);
   color: #fff;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -81,8 +76,6 @@
 }
 
 .HighlightHeader {
-  display: flex;
-  align-items: center;
 }
 
 .HighlightHeader > * + * {
@@ -137,8 +130,6 @@
 }
 
 .ContactLines {
-  display: flex;
-  flex-direction: column;
   color: inherit;
   margin: 1vw 0;
 }
@@ -148,8 +139,6 @@
 }
 
 .ContactLine {
-  display: flex;
-  align-items: center;
   margin: 1vw 0;
 }
 

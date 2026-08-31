@@ -18,11 +18,11 @@ function ContactCard({ props:{ t } }) {
   ]
 
   return (
-    <div className="ContactCard">
+    <div className="ContactCard flex column">
 
       <h3>{cardTitle}</h3>
 
-      <div className="ContactLines">
+      <div className="ContactLines flex column">
       {
         contactLines.map((line) => {
           const { label, href, icon, isExternal } = line
