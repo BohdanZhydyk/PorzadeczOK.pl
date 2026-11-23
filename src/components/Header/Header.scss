@@ -4,14 +4,14 @@
   top: 0;
   left: 0;
   right: 0;
-  background: #f5fbf499;
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(0.83vw);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--line);
   z-index: 10;
-  box-shadow: 0 0.83vw 1.67vw #1e241c14;
+  box-shadow: 0 0.5vw 1.5vw rgba(21, 128, 61, 0.08);
   height: var(--header-height);
   padding: 0 5vw;
-  transition: height 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .SiteHeaderInner {
@@ -41,9 +41,10 @@
   height: 5vw;
   object-fit: contain;
   border-radius: 1.2vw;
-  background: #ffffffcc;
-  padding: 0.66vw;
-  box-shadow: 0 0.83vw 1.67vw #1e1b1814;
+  background: #ffffff;
+  padding: 0.5vw;
+  border: 2px solid var(--line);
+  box-shadow: 0 0.4vw 1vw rgba(21, 128, 61, 0.12);
   transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
 }
 
@@ -53,11 +54,12 @@
 }
 
 .BrandName {
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  font-family: 'Courgette', cursive;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-family: 'Sora', sans-serif;
   font-size: clamp(2.1vw, 2.5vw, 3vw);
-  text-align: center;
+  color: var(--accent);
+  text-align: left;
   transition: font-size 0.3s ease;
 }
 
@@ -65,7 +67,8 @@
   margin-top: 0.14vw;
   font-size: clamp(0.8vw, 0.95vw, 1.2vw);
   color: var(--muted);
-  text-align: center;
+  font-weight: 500;
+  text-align: left;
   width: 100%;
   transition: font-size 0.3s ease;
 }
@@ -80,10 +83,11 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1vw;
+  transition: color 0.2s ease;
 }
 
 .SiteNav a:hover {
-  color: var(--ink);
+  color: var(--accent-strong);
 }
 
 .LangToggle {
@@ -102,7 +106,7 @@
 
 .LangToggle:hover .LangFlag,
 .LangToggle:focus-visible .LangFlag {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 @media (max-width: 1200px) {

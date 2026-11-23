@@ -1,0 +1,29 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    open: false,
+    proxy: {
+      '/AppFiles': {
+        target: 'https://porzadeczok.pl',
+        changeOrigin: true,
+      },
+    },
+  },
+  preview: {
+    proxy: {
+      '/AppFiles': {
+        target: 'https://porzadeczok.pl',
+        changeOrigin: true,
+      },
+    },
+  },
+  build: {
+    outDir: 'build',
+    emptyOutDir: true,
+  },
+})

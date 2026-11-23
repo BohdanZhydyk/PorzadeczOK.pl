@@ -7,24 +7,30 @@
 }
 
 .ContactCard {
-  flex: 1 1 18.06vw;
+  flex: 1 1 26vw;
   margin: 0.7vw;
-  min-width: 22vw;
-  max-width: 100%;
-}
-
-.ContactCard {
+  min-width: 330px;
+  max-width: 420px;
   background: var(--card);
   padding: 1.81vw;
-  border-radius: 1.53vw;
-  border: 1px solid #1e241c14;
-  box-shadow: 0 0.83vw 1.67vw #1e241c0f;
-  backdrop-filter: blur(0.56vw);
+  border-radius: 1.2vw;
+  border: 2px solid #e2f7e6;
+  border-top: 4px solid var(--accent-vibrant);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ContactCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .ContactCard h3 {
   margin: 0;
   color: var(--accent);
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
   font-size: clamp(1.1vw, 1.35vw, 1.7vw);
 }
 
@@ -33,100 +39,291 @@
 }
 
 .ContactCard.Highlight {
-  background: var(--accent);
+  flex: 1.6 1 44vw;
+  min-width: 440px;
+  max-width: 100%;
+  background: linear-gradient(145deg, #14532d 0%, #15803d 50%, #16a34a 100%);
   color: #fff;
-  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-top: 4px solid #86efac;
+  box-shadow: 0 12px 32px -4px rgba(21, 128, 61, 0.38);
 }
 
 .ContactCard.Highlight h3 {
   color: #fff;
 }
 
-.ContactCard.Highlight .Btn {
-  background: #fff;
-  color: var(--accent-strong);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0.69vw 1.39vw #1e241c1a;
-  animation: fixly-pulse 1.6s ease-in-out infinite;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
-  margin-top: 2.5vw;
+/* Reviews Card inside Contact */
+.ReviewsCard {
+  justify-content: space-between;
 }
 
-.ContactCard.Highlight .Btn::after {
-  content: '';
-  position: absolute;
-  top: -20%;
-  left: -40%;
-  width: 40%;
-  height: 140%;
-  background: linear-gradient(90deg, #ffffff00, #38ae1e33, #ffffff00);
-  transform: skewX(-18deg);
-  animation: fixly-shine 2.4s ease-in-out infinite;
+.ReviewsCardHeader {
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1vw;
+  margin-bottom: 0.8vw;
+  gap: 1vw;
+}
+
+.ReviewsFixlyBadge {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.ReviewsScoreInfo {
+  flex: 1;
+}
+
+.ReviewsScoreRow {
+  gap: 0.6vw;
+  align-items: baseline;
+}
+
+.ReviewsRatingNumber {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.ReviewsRatingStars {
+  color: #facc15;
+  font-size: clamp(1.1rem, 1.4vw, 1.7rem);
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ReviewsScale {
+  font-size: clamp(0.75rem, 0.9vw, 1rem);
+  color: #dcfce7;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.ReviewsMetaRow {
+  margin-top: 0.2vw;
+  gap: 0.5vw;
+  font-size: clamp(0.75rem, 0.85vw, 0.95rem);
+  color: #dcfce7;
+}
+
+.ReviewsCount {
+  font-weight: 600;
+}
+
+.ReviewsDot {
+  opacity: 0.6;
+}
+
+.ReviewsVerifiedLabel {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.1vw 0.5vw;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.ReviewsHeaderCtaBtn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(0.75rem, 0.85vw, 0.95rem);
+  font-weight: 700;
+  padding: 0.45vw 0.9vw;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ReviewsHeaderCtaBtn:hover {
+  background: #ffffff;
+  color: #15803d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Reviews List Container */
+.ReviewsContainer {
+  gap: 0.7vw;
+  margin: 0.4vw 0;
+}
+
+.ReviewItem {
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 0.9vw;
+  padding: 0.9vw 1.1vw;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dcfce7;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 6.8vw;
+}
+
+.ReviewItem.is-fading {
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+}
+
+.ReviewItem.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ReviewItemTop {
+  justify-content: flex-start;
+  gap: 0.6vw;
+  margin-bottom: 0.35vw;
+}
+
+.ReviewItemStars {
+  color: #f59e0b;
+  font-size: clamp(0.85rem, 1vw, 1.15rem);
+  letter-spacing: 1px;
+}
+
+.ReviewItemCategory {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  font-size: clamp(0.68rem, 0.75vw, 0.85rem);
+  font-weight: 700;
+  padding: 0.15vw 0.55vw;
+  border-radius: 999px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 24vw;
+}
+
+.ReviewItemShuffleBtn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2vw;
+  border-radius: 50%;
+  transition: color 0.2s ease, transform 0.3s ease;
+}
+
+.ReviewItemShuffleBtn:hover {
+  color: #16a34a;
+  transform: rotate(180deg);
+}
+
+.ReviewItemContent {
+  margin: 0.2vw 0 0.4vw 0;
+  font-size: clamp(0.82rem, 0.9vw, 1.05rem);
+  line-height: 1.45;
+  color: #334155;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.ReviewItem.is-expanded .ReviewItemContent {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.ReviewExpandBtn {
+  background: none;
+  border: none;
+  color: #15803d;
+  font-weight: 700;
+  font-size: clamp(0.72rem, 0.78vw, 0.85rem);
+  cursor: pointer;
+  padding: 0.1vw 0;
+  margin-bottom: 0.4vw;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.ReviewExpandBtn:hover {
+  color: #166534;
+  text-decoration: underline;
+}
+
+.ReviewItemFooter {
+  gap: 0.5vw;
+  font-size: clamp(0.7rem, 0.78vw, 0.88rem);
+  color: #64748b;
+  margin-top: auto;
+}
+
+.ReviewAuthorName {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ReviewAuthorCity {
+  color: #475569;
+}
+
+.ReviewItemVerifiedBadge {
+  color: #15803d;
+  font-weight: 700;
+  background: #f0fdf4;
+  padding: 0.1vw 0.4vw;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  border: 1px solid #dcfce7;
+}
+
+.ReviewItemDate {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 0.7rem;
+}
+
+/* Card Bottom Footer */
+.ReviewsCardFooter {
+  justify-content: space-between;
+  margin-top: 0.8vw;
+  padding-top: 0.6vw;
+  gap: 1vw;
+}
+
+.ReviewsCardHint {
+  font-size: clamp(0.68rem, 0.75vw, 0.82rem);
+  color: #dcfce7;
+  opacity: 0.85;
+}
+
+.ContactCard.Highlight .Btn.ReviewsFullCta {
+  margin-top: 0;
+  padding: 0.5vw 1.2vw;
+  font-size: clamp(0.78rem, 0.88vw, 1rem);
+  white-space: nowrap;
 }
 
 .HighlightIcon {
   width: 3.4vw;
   height: 3.4vw;
   object-fit: contain;
-  background: #ffffffcc;
+  background: #ffffff;
   padding: 0.4vw;
-  border-radius: 0.85vw;
-  box-shadow: 0 0.56vw 1.11vw #1e241c2b;
+  border-radius: 0.8vw;
+  box-shadow: 0 0.3vw 0.8vw rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
 }
 
-.HighlightHeader {
-}
-
-.HighlightHeader > * + * {
-  margin-left: 0.83vw;
-}
-
-.HighlightHeader h3 {
-  margin: 0;
-}
-
-.HighlightHeader p {
-  margin: 0.28vw 0 0;
-}
-
-.ContactCard.Highlight .Btn:hover {
-  transform: translateY(-0.28vw) scale(1.08);
-  box-shadow: 0 1.8vw 3.6vw #2d89186b;
-  filter: brightness(1.12);
-}
-
-@keyframes fixly-pulse {
-  0% {
-    transform: translateZ(0) scale(1);
-    box-shadow: 0 0.69vw 1.39vw #2d891820;
-  }
-  50% {
-    transform: translateZ(0) scale(1.03);
-    box-shadow: 0 1.39vw 2.78vw #2d89185a;
-  }
-  100% {
-    transform: translateZ(0) scale(1);
-    box-shadow: 0 0.69vw 1.39vw #2d891820;
-  }
-}
-
-@keyframes fixly-shine {
-  0% {
-    transform: translateX(-140%) skewX(-18deg);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateX(240%) skewX(-18deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(240%) skewX(-18deg);
-    opacity: 0;
-  }
+.HighlightIcon:hover {
+  transform: scale(1.05);
 }
 
 .ContactLines {
@@ -153,9 +350,12 @@
 }
 
 .ContactLink {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
-  font-size: 150%;
+  font-size: clamp(0.95rem, 1.15vw, 1.35rem);
+  font-weight: 700;
+  transition: color 0.2s ease;
+  word-break: break-word;
 }
 
 .ContactLink:hover {
@@ -166,6 +366,8 @@
 .ContactNote {
   position: relative;
   padding-left: clamp(1vw, 1.2vw, 1.6vw);
+  font-size: clamp(0.85rem, 0.9vw, 1.05rem);
+  line-height: 1.5;
 }
 
 .ContactNote::before {
@@ -173,26 +375,20 @@
   position: absolute;
   left: 0;
   top: 50%;
-  width: 0.65vw;
-  height: 0.65vw;
+  width: 0.6vw;
+  height: 0.6vw;
   border-radius: 50%;
-  background: var(--accent-strong);
-  box-shadow: 0 0.28vw 0.56vw #2d891833;
+  background: var(--accent-vibrant);
+  box-shadow: 0 0 8px var(--accent-vibrant);
   transform: translateY(-50%);
 }
 
 @media (max-width: 1200px) {
-  .ContactCard h3 {
-    font-size: 1.7vw;
-  }
-
-  .ContactLink,
-  .ContactCard p {
-    font-size: 1.3vw;
-  }
+  .ContactCard h3 { font-size: 1.7vw; }
+  .ContactLink, .ContactCard p { font-size: 1.3vw; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .ContactGrid {
     flex-direction: column;
     margin: 0;
@@ -200,50 +396,115 @@
 
   .ContactCard {
     width: 100%;
-    margin: 0 0 2vw 0;
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+    margin: 0 0 20px 0;
+    box-sizing: border-box;
   }
 
   .ContactCard:last-child {
     margin-bottom: 0;
   }
 
-  .ContactLink,
-  .ContactLine,
-  .ContactCard p {
-    font-size: 2.4vw;
+  .ContactCard.Highlight {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+  }
+
+  .ContactLink {
+    font-size: clamp(1rem, 2.4vw, 1.35rem);
+  }
+
+  .ContactCard p,
+  .ContactLine {
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
   }
 
   .ContactCard h3 {
-    font-size: 2vw;
+    font-size: clamp(1.25rem, 2.8vw, 1.7rem);
   }
 
   .ContactIcon {
-    width: 2.6vw;
-    height: 2.6vw;
+    width: clamp(24px, 3.2vw, 32px);
+    height: clamp(24px, 3.2vw, 32px);
   }
 
   .HighlightIcon {
-    width: 4.8vw;
-    height: 4.8vw;
+    width: clamp(48px, 6vw, 64px);
+    height: clamp(48px, 6vw, 64px);
   }
 
-  .ContactCard.Highlight .Btn {
-    padding: 0.54vw 0.99vw;
+  .ReviewItem {
+    padding: 16px 18px;
+    min-height: auto;
+  }
+
+  .ReviewItemCategory {
+    max-width: 60%;
   }
 }
 
 @media (max-width: 600px) {
+  .ContactCard {
+    padding: 20px 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
   .HighlightIcon {
-    width: 7vw;
-    height: 7vw;
+    width: 44px;
+    height: 44px;
   }
 
   .ContactCard h3 {
-    font-size: 3.2vw;
+    font-size: 1.25rem;
   }
 
-  .ContactLink,
+  .ContactLink {
+    font-size: 0.95rem;
+  }
+
   .ContactCard p {
-    font-size: 2.5vw;
+    font-size: 0.88rem;
+  }
+
+  .ReviewsCardHeader {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .ReviewsHeaderCtaBtn {
+    display: none;
+  }
+
+  .ReviewItem {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .ReviewItemCategory {
+    max-width: 65%;
+  }
+
+  .ReviewItemContent {
+    -webkit-line-clamp: 4;
+    font-size: 0.88rem;
+  }
+
+  .ReviewsCardFooter {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .ContactCard.Highlight .Btn.ReviewsFullCta {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.95rem;
   }
 }

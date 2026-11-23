@@ -1,0 +1,290 @@
+{
+  "company": "PorządeczOK",
+  "source": "Fixly",
+  "sourceUrl": "https://fixly.pl/profil/5rndvepl",
+  "summary": {
+    "averageRating": 4.8,
+    "ratingScale": 5,
+    "totalReviews": 21,
+    "totalClients": 20,
+    "ratingsDistribution": {
+      "5": 17,
+      "4": 3,
+      "3": 1,
+      "2": 0,
+      "1": 0
+    }
+  },
+  "reviews": [
+    {
+      "id": 1,
+      "author": "Wojciech",
+      "city": "Gdańsk",
+      "date": "2026-10-12",
+      "rating": 4,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "szybko i sprawnie",
+        "en": "quick and efficient"
+      }
+    },
+    {
+      "id": 2,
+      "author": "Marek",
+      "city": "Wysigi",
+      "date": "2026-09-26",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Bardzo solidna Pani. Sprząta dokładnie. Punktualna. Godna zaufania i polecenia",
+        "en": "Very reliable lady. Cleans thoroughly. Punctual. Trustworthy and highly recommended."
+      }
+    },
+    {
+      "id": 3,
+      "author": "Maksym",
+      "city": "Reda",
+      "date": "2026-09-11",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Uczciwa i rzetelna Pani",
+        "en": "Honest and reliable lady."
+      }
+    },
+    {
+      "id": 4,
+      "author": "Beata",
+      "city": "Rumia",
+      "date": "2026-09-10",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Polecam. Mieszkanie czyściutkie pachnące. Super.",
+        "en": "Highly recommend. Flat is spotless and fresh. Super."
+      }
+    },
+    {
+      "id": 5,
+      "author": "Daria",
+      "city": "Reda",
+      "date": "2026-09-06",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "wszystko sprawnie posprzątane bez zastrzeżeń.",
+        "en": "everything cleaned efficiently without any complaints."
+      }
+    },
+    {
+      "id": 6,
+      "author": "Adrian",
+      "city": "Gdańsk",
+      "date": "2026-08-05",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "wszystko ok :)",
+        "en": "everything ok :)"
+      }
+    },
+    {
+      "id": 7,
+      "author": "Agnieszka",
+      "city": "Dębogórze Wybudowanie",
+      "date": "2026-07-05",
+      "rating": 5,
+      "category": {
+        "pl": "Mycie okien",
+        "en": "Window washing"
+      },
+      "content": {
+        "pl": "Mogę z czystym sumieniem polecić Panią Oksanę. Bardzo szybki kontakt i odpowiedź na zapytanie, bardzo dokładnie wykonana praca, okna lśnią, a mocne zabrudzenia tapicerki pięknie doczyszczone. Bardzo dziękuję i zachowuję kontakt 🙂",
+        "en": "I can recommend Oksana with a clear conscience. Prompt contact, very thorough work, windows are sparkling, and heavy upholstery stains were beautifully cleaned. Thank you very much, I will definitely keep in touch 🙂"
+      }
+    },
+    {
+      "id": 8,
+      "author": "Maja",
+      "city": "Wejherowo",
+      "date": "2026-03-30",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "godna polecenia",
+        "en": "highly recommended"
+      }
+    },
+    {
+      "id": 9,
+      "author": "Tadeusz",
+      "city": "Wejherowo",
+      "date": "2025-09-09",
+      "rating": 5,
+      "category": {
+        "pl": "Mycie okien i sprzątanie",
+        "en": "Window washing & cleaning"
+      },
+      "content": {
+        "pl": "Serdecznie polecam, okna błyszczą z daleka a o sprzątaniu łazienek to już nie wspomnę, czyściutkie i pachnące. Jestem bardzo zadowolony z wykonanej usługi za co również jeszcze raz bardzo dziękuję! Jeżeli ktokolwiek zastanawia się nad zleceniem wykonania porządków w domu, to bez wahania mogę z ręką na sercu zaprosić do kontaktu.",
+        "en": "Warmly recommend! The windows shine from afar, not to mention the bathrooms – sparkling clean and fresh. I am very satisfied with the service. If anyone is considering hiring for home cleaning, I can wholeheartedly recommend getting in touch."
+      }
+    },
+    {
+      "id": 10,
+      "author": "Katarzyna",
+      "city": "Gdynia",
+      "date": "2025-09-04",
+      "rating": 4,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Sprzątanie zrealizowane zgodnie ze zleceniem.",
+        "en": "Cleaning completed as requested."
+      }
+    },
+    {
+      "id": 13,
+      "author": "Agnieszka",
+      "city": "Banino",
+      "date": "2025-07-28",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Dom czysty aż błyszczy. Pełen profesjonalizm i dedykacja! Gorąco polecam współpracę z Panią Oksaną.",
+        "en": "The house is so clean it shines. Full professionalism and dedication! I warmly recommend working with Oksana."
+      }
+    },
+    {
+      "id": 14,
+      "author": "Karina",
+      "city": "Bojano",
+      "date": "2025-06-23",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Polecam Panią Oksanę :) Jeśli jesteś przytłoczona/ny porządkami domowymi, to jest idealna osoba, która doprowadzi Twój dom do ładu.",
+        "en": "I recommend Oksana :) If you feel overwhelmed by household chores, she is the perfect person to bring order to your home."
+      }
+    },
+    {
+      "id": 15,
+      "author": "Jerzy",
+      "city": "Krokowa",
+      "date": "2025-06-17",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Wszystko ok, sprawnie i terminowo.",
+        "en": "Everything ok, efficient and punctual."
+      }
+    },
+    {
+      "id": 16,
+      "author": "Zbigniew",
+      "city": "Krokowa",
+      "date": "2025-04-14",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Sprzątanie domu zgodnie z oczekiwaniami. Polecam usługi Pani Oksany.",
+        "en": "House cleaning exactly as expected. I recommend Oksana's services."
+      }
+    },
+    {
+      "id": 17,
+      "author": "Angelika",
+      "city": "Reda",
+      "date": "2025-04-04",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Serdecznie polecam, Pani Oksana jest bardzo miłą osobą z ogromną energią do pracy, zjawiła się punktualnie z profesjonalnym sprzętem. Mieszkanie zostało wysprzątane bardzo dokładnie, wszystko wręcz lśni. Uczciwa i odpowiedzialna. Na pewno jeszcze się zobaczymy :) Polecam 🌸",
+        "en": "Warmly recommend! Oksana arrived punctually with professional equipment. The flat was cleaned very thoroughly, everything literally sparkles. Honest and responsible. We will definitely meet again :) Recommend 🌸"
+      }
+    },
+    {
+      "id": 18,
+      "author": "Michalina",
+      "city": "Gdańsk",
+      "date": "2025-03-15",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Pani Oksana wraz ze współpracowniczką niesamowicie sprzątnęły mieszkanie. Wszystko absolutnie lśniło, dogłębnie wyczyszczona kuchnia i łazienka oraz wnętrza szafek. Po powrocie zastałam mieszkanie w idealnym stanie. Całym sercem polecam!",
+        "en": "Oksana and her coworker did an incredible job cleaning the apartment. Everything absolutely shone – deeply cleaned kitchen, bathroom, and cabinet interiors. I found the place in perfect condition. Recommend with all my heart!"
+      }
+    },
+    {
+      "id": 19,
+      "author": "Joanna",
+      "city": "Gdynia",
+      "date": "2025-02-22",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Polecam, wszystko posprzątane dokładnie. Piekarnik i kuchenka doprowadzone do stanu idealnego, na pewno jeszcze skorzystam z usług pani Oksany.",
+        "en": "Recommend! Everything cleaned thoroughly. The oven and stove were brought to ideal condition. I will definitely use Oksana's services again."
+      }
+    },
+    {
+      "id": 20,
+      "author": "Beata",
+      "city": "Gdynia",
+      "date": "2025-02-11",
+      "rating": 5,
+      "category": {
+        "pl": "Sprzątanie mieszkań i domów",
+        "en": "Flat and house cleaning"
+      },
+      "content": {
+        "pl": "Bardzo polecam. Dokładne sprzątanie w każdym zakamarku. Jestem bardzo zadowolona, już poleciłam znajomym. Duża empatia i rzetelność. Zdecydowanie polecam.",
+        "en": "Highly recommend. Thorough cleaning in every corner. Very satisfied, already recommended to friends. Great reliability and empathy. Definitely recommend."
+      }
+    }
+  ]
+}

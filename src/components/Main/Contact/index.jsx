@@ -3,7 +3,7 @@ import SectionHeader from '../SectionHeader'
 import ContactCard from './ContactCard'
 import ContactCardHighlight from './ContactCardHighlight'
 
-function Contact({ props:{ t } }) {
+function Contact({ props:{ t, lang } }) {
   
   const { title, subtitle } = t.contact
 
@@ -17,7 +17,7 @@ function Contact({ props:{ t } }) {
 
           <ContactCard props={{ t }} />
 
-          <ContactCardHighlight props={{ t }} />
+          <ContactCardHighlight props={{ t, lang }} />
 
         </div>
       </div>

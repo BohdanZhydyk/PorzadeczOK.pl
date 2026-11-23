@@ -9,9 +9,20 @@ import Footer from './components/Footer'
 function App() {
 
   const [lang, setLang] = useState(() => {
-    const savedLang = window.localStorage.getItem('porzadeczok-lang')
-    if (savedLang === 'pl' || savedLang === 'en') return savedLang
-    return navigator.language.toLowerCase().startsWith('pl') ? 'pl' : 'en'
+    try {
+      if (typeof window !== 'undefined') {
+        const params = new URLSearchParams(window.location.search)
+        const urlLang = params.get('lang')
+        if (urlLang === 'pl' || urlLang === 'en') return urlLang
+
+        const savedLang = window.localStorage.getItem('porzadeczok-lang')
+        if (savedLang === 'pl' || savedLang === 'en') return savedLang
+      }
+    } catch (e) {
+      // fallback
+    }
+    // Domyślnie zawsze język polski (dla Googlebota, wyszukiwarek i klientów)
+    return 'pl'
   })
   const t = lang === 'pl' ? translatePl : translateEn
   const [isCompact, setIsCompact] = useState(false)
@@ -23,6 +34,7 @@ function App() {
     document.documentElement.lang = lang
     document.title = t.seo.title
     document.querySelector('meta[name="description"]')?.setAttribute('content', t.seo.description)
+    document.querySelector('meta[name="keywords"]')?.setAttribute('content', t.seo.keywords)
     document.querySelector('meta[property="og:locale"]')?.setAttribute('content', t.seo.locale)
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', t.seo.title)
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', t.seo.description)
@@ -46,7 +58,7 @@ function App() {
 
       <Header props={{ t, isCompact, lang, onLangToggle: handleLangToggle }} />
 
-      <Main props={{ t }} />
+      <Main props={{ t, lang }} />
 
       <Footer props={{ t }} />
 
